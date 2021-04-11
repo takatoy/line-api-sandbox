@@ -17,7 +17,7 @@ function handleEvent(event) {
 
   return client.replyMessage(event.replyToken, {
     type: 'text',
-    text: EventTarget.message.text
+    text: event.message.text
   });
 }
 
