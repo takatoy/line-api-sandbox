@@ -15,9 +15,21 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  const suffix = [
+    "っていまいち。",
+    "はあまり好きじゃないな。",
+    "は嫌いだなぁ。",
+    "だけはやめて欲しい",
+    "はいいよね。",
+    "って好き。",
+    "はとても好き。",
+    "は大好き。",
+    "は好きすぎる。",
+  ];
+
   return client.replyMessage(event.replyToken, {
     type: 'text',
-    text: event.message.text
+    text: event.message.text + suffix[Math.floor(Math.random() * suffix.length)]
   });
 }
 
